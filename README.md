@@ -23,6 +23,10 @@ $ npm start
 
 Please follow the guide [How to Use MERN Stack: A Complete Guide](https://www.mongodb.com/languages/mern-stack-tutorial).
 
+## How to Fix "ReplicaSetNoPrimary and MongoServerSelectionError error while connecting MongoDB with Node.js"
+
+Please follow the guide [Getting ReplicaSetNoPrimary and MongoServerSelectionError error while connecting MongoDB with nodejs](https://stackoverflow.com/questions/60063820/getting-replicasetnoprimary-and-mongoserverselectionerror-error-while-connecting).
+
 ## Available Routes
 
 ```
