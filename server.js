@@ -40,7 +40,7 @@ app.delete("/photo/:id", photos.deletePhoto(dbo));
 app.listen(PORT, () => {
   // Perform database connection when server starts
   dbo.connectToServer((error) => {
-    if (error) console.error(error);
+    if (error) throw new Error(error);
   });
 
   console.log(`App is listening to port ${PORT}`);
