@@ -1,6 +1,6 @@
-# imageuploaderchallenge-api
+# myunsplashchallenge-api
 
-The backend server for 'imageuploaderchallenge' project.
+The backend server for 'myunsplashchallenge' project.
 
 ## How To Use
 
