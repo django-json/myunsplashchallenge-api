@@ -1,8 +1,12 @@
-const { response } = require("express");
 const { ObjectId } = require("mongodb");
 
-function addPhoto(dbo) {
+function addPhoto(dbo, validationResult) {
   return function (req, res) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
     const { label, photoURL } = req.body;
     const db_connect = dbo.getDb();
     const photoObject = {

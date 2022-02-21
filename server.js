@@ -3,6 +3,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const compression = require("compression");
 const multer = require("multer");
+const { body, validationResult } = require("express-validator");
 // Require 'dotenv' in development mode
 if (process.env.NODE_ENV !== "production") require("dotenv").config();
 
@@ -26,7 +27,13 @@ app.get("/", (req, res) => {
 app.get("/photos", photos.getPhotos(dbo));
 
 // multer().none - middleware for decoding text-only multipart
-app.post("/photo/add", multer().none(), photos.addPhoto(dbo));
+app.post(
+  "/photo/add",
+  multer().none(),
+  body("label").not().isEmpty().trim().escape(),
+  body("photoURL").isURL(),
+  photos.addPhoto(dbo, validationResult)
+);
 
 app.delete("/photo/:id", photos.deletePhoto(dbo));
 
