@@ -21,7 +21,7 @@ function connectToServer(callback) {
 }
 
 function getDb() {
-  return global._db;
+  return _db;
 }
 
 module.exports = {
