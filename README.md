@@ -1,3 +1,6 @@
+# ⚠️ ARCHIVED PROJECT NOTICE
+This repository has been archived and is no longer maintained. 
+
 # myunsplashchallenge-api
 
 The backend server for 'myunsplashchallenge' project.
